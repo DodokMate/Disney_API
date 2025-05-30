@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Disney API</title>
 </head>
 <body>
@@ -15,12 +15,15 @@
                 <h1>Disney karakterek</h1>
             </header>
 
-            <button>Képek generálása...</button>
+            <button onclick="kepekGeneralas()">Képek generálása...</button>
         </div>
 
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12" id="elso"></div>
-            <div class="col-lg-6 col-md-6 col-sm-12" id="masodik"></div>
+            <div id="elso"></div>
+            <div id="masodik"></div>
+            <div id="harmadik"></div>
+            <div id="negyedik"></div>
+            <div id="otodik"></div>
         </div>
 
         <div class="row">
@@ -29,5 +32,61 @@
             </footer>
         </div>
    </div>
+
+   <script>
+        async function kepekGeneralas() {
+            const response = await fetch("https://disneyapi.dev/api/characters?limit=10");
+            const data = await response.json();
+
+            for (let i = 0; i < 8; i++) {
+                const imageUrl = data[i].imageUrl;
+                const id = data[i].id;
+                const name = data[id].name;
+                const films = data[i].films;
+                const shortFilms = data[i].shortFilms;
+                const tvShows = data[i].tvShows;
+                const videoGames = data[i].videoGames;
+                const parkAttractions = data[i].parkAttractions;
+                const allies = data[i].allies;
+                const enemies = data[i].enemies;
+
+                const card =
+                    `
+                    <div class="col-lg-6 col-md-6">
+                        <div class=" card card_img_div">
+                            <img class="card-img img-fluid" src="${imageUrl}"/>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card card_description_div">
+                            <p>Id: ${id}</p>
+                            <p>Name: ${name}</p>
+                            <p>Films: ${films}</p>
+                            <p>Short Films: ${shortFilms}</p>
+                            <p>TV Shows: ${tvShows}</p>
+                            <p>Video Games: ${videoGames}</p>
+                            <p>Park Attractions: ${parkAttractions}</p>
+                            <p>Allies: ${allies}</p>
+                            <p>Enemies: ${enemies}</p>
+                            
+                        </div>
+                    </div>
+                `;
+
+                if (i < 2) {
+                    document.querySelector("#elso").innerHTML += card;
+                } else if (4 > i > 2) {
+                    document.querySelector("#masodik").innerHTML += card;
+                } else if (6 > i > 4) {
+                    document.querySelector("#harmadik").innerHTML += card;
+                } else if (8 > i > 6) {
+                    document.querySelector("#negyedik").innerHTML += card;
+                } else {
+                    document.querySelector("#otodik").innerHTML += card;
+                }
+            }
+        }
+   </script>
 </body>
 </html>

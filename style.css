@@ -1,0 +1,89 @@
+body {
+    background-image: linear-gradient(135deg, rgb(59, 112, 220), rgb(4, 34, 53));
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    text-align: center;
+    background-image: linear-gradient(black, transparent);
+}
+
+h1 {
+    color: white;
+    font-family: "Oregano", cursive;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+button {
+    background-color: white;
+    width: 10rem;
+    height: 3rem;
+    color: rgb(4, 35, 53);
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    letter-spacing: 0.1rem;
+    font-style: normal;
+    font-size: 1rem;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    border: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: rgba(212, 163, 231, 0.532);
+    color: rgb(4, 35, 53);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    text-align: center;
+    background-color: rgb(91, 91, 91);
+}
+
+h2 {
+    color: white;
+    font-family: "Noto Serif Dives Akuru", serif;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.card_img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    background-color: transparent;
+}
+
+.card-img{
+   width: 50%;
+}
+
+.card_description_div{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 1rem auto;
+}

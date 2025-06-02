@@ -1,32 +1,90 @@
 body {
-    background-image: linear-gradient(135deg, rgb(59, 112, 220), rgb(4, 34, 53));
+    background-color: rgba(15, 14, 14, 0.777);
     background-size: 100% 100%;
-    background-attachment: fixed;
+}
+
+#menu{
+   background-color: rgba(0, 0, 0, 0.534);
+   border-bottom: 0.2rem solid rgb(255, 255, 255);
+}
+
+ul{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+li{
+    margin: 1rem 1rem 0 1rem;
+    list-style: none;
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    letter-spacing: 0.1rem;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+ul a{
+    text-decoration: none;
+    color: white;
+}
+
+ul a:hover{
+    color: red;
+    text-decoration: underline;
 }
 
 header {
+    background-image: url(img/fejlec2.webp);
+    background-size: 40% 80%;
+    background-position-x: 24.5rem;
+    background-position-y: 2.5rem;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25vh;
+    height: 50vh;
     text-align: center;
-    background-image: linear-gradient(black, transparent);
+    background-color: #ecd77c;
+    border-bottom: 0.2rem solid rgb(255, 255, 255);
 }
 
-h1 {
+#cim1 {
     color: white;
     font-family: "Oregano", cursive;
     font-weight: bold;
     letter-spacing: 0.1rem;
     font-style: normal;
+    font-size: 5.5rem;
+    margin-left: 8rem;
+    text-shadow: -1rem 1rem 4rem black;
+}
+
+#cim2 {
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
     font-size: 4rem;
+    letter-spacing: -0.2rem;
+    margin-top: 1.5rem;
+    margin-right: 20rem;
+    text-shadow: -1rem 1rem 4rem rgba(0, 0, 0, 0.379);
+}
+
+#pokeball_img{
+    width: 5%;
+    margin: 0.1rem;
 }
 
 button {
-    background-color: white;
+    background-color: transparent;
     width: 10rem;
     height: 3rem;
-    color: rgb(4, 35, 53);
+    color: rgb(255, 255, 255);
     font-family: "DynaPuff", system-ui;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -36,19 +94,19 @@ button {
     font-style: normal;
     font-size: 1rem;
     padding: 1rem;
-    border: none;
+    border: 0.15rem solid black;
     cursor: pointer;
-    border: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 2rem auto;
-    transition: background-color 0.3s ease-in-out;
+    transition: 0.5s;
+    border-radius: 1rem;
 }
 
 button:hover {
-    background-color: rgba(212, 163, 231, 0.532);
-    color: rgb(4, 35, 53);
+    background-color: rgba(0, 0, 0, 0.878);
+    color: rgb(255, 255, 255);
 }
 
 footer {
@@ -69,21 +127,41 @@ h2 {
     font-size: 2rem;
 }
 
-.card_img_div{
+.card_img_div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem auto;
-    background-color: transparent;
+    margin: 1rem auto 0 auto;
+    height: 20em;
+    background-color: rgba(188, 188, 188, 0.556);
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
 }
 
-.card-img{
-   width: 50%;
+.card_img_div:hover {
+    border: 0.2rem solid gold;
+    background-image: radial-gradient(rgba(255, 217, 0, 0.57), transparent);
 }
 
-.card_description_div{
+.card-img {
+    width: 11em;
+}
+
+.card_description_div {
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin: 1rem auto;
+    height: 15em;
+    margin: 0 auto 1rem auto;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    padding: 1rem;
+}
+
+p {
+    font-family: "Noto Serif Dives Akuru", serif;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    font-style: normal;
+    font-size: 0.85rem;
 }
